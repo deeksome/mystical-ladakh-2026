@@ -156,6 +156,39 @@
     align-self: stretch;
   }
 
+  .hero-bikes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+  }
+
+  .hero-bike-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.82);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 7px 14px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+  }
+
+  .hero-bike-item svg {
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+
+  .hero-bike-sep {
+    color: rgba(255,255,255,0.3);
+    font-size: 18px;
+  }
+
   /* ─── NAV ───────────────────────────────────────────── */
   .nav {
     position: sticky;
@@ -637,6 +670,9 @@
     .hero-stat-val   { font-size: 22px; }
     .hero-stat-label { font-size: 8.5px; letter-spacing: 0.1em; }
     .hero-divider    { display: none; }
+    .hero-bikes      { margin-top: 16px; gap: 8px; }
+    .hero-bike-item  { font-size: 11px; padding: 6px 10px; gap: 6px; }
+    .hero-bike-sep   { display: none; }
 
     /* Nav */
     .nav             { padding: 0 16px; }
@@ -714,9 +750,22 @@
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Motorcycle Expedition · Summer 2026</p>
+    <p class="hero-eyebrow">Motorcycle Expedition · Departs May 28, 2026</p>
     <h1 class="hero-title">Mystical<br><em>Ladakh</em></h1>
     <p class="hero-subtitle">Delhi → Amritsar → Srinagar → Leh → Turtuk → Umling La → Manali → Delhi. Thirteen days across the roof of the world.</p>
+
+    <div class="hero-bikes">
+      <span class="hero-bike-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h2l2 5H9l1.5-3H15z"/><path d="M5.5 17.5L8 12l4 1"/></svg>
+        TVS RTR 310 × 3
+      </span>
+      <span class="hero-bike-sep">·</span>
+      <span class="hero-bike-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h2l2 5H9l1.5-3H15z"/><path d="M5.5 17.5L8 12l4 1"/></svg>
+        KTM 390 Adventure × 1
+      </span>
+    </div>
+
     <div class="hero-meta">
       <div class="hero-stat">
         <span class="hero-stat-val">13</span>
@@ -734,8 +783,8 @@
       </div>
       <div class="hero-divider"></div>
       <div class="hero-stat">
-        <span class="hero-stat-val">1</span>
-        <span class="hero-stat-label">Lifetime</span>
+        <span class="hero-stat-val">4</span>
+        <span class="hero-stat-label">Bikes</span>
       </div>
     </div>
   </div>
