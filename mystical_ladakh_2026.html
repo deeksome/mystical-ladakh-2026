@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystical Ladakh 2026 — Delhi to Umling La</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0e0c0a;
+    --paper: #f5f0e8;
+    --warm-white: #faf8f4;
+    --gold: #c9943a;
+    --gold-light: #e8c06a;
+    --rust: #b84c2b;
+    --slate: #2c3340;
+    --muted: #7a7166;
+    --accent-blue: #1a3a5c;
+    --border: rgba(14,12,10,0.12);
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ─── HERO ─────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1800&q=85');
+    background-size: cover;
+    background-position: center 40%;
+    transform: scale(1.04);
+    animation: heroZoom 18s ease-out forwards;
+  }
+
+  @keyframes heroZoom {
+    to { transform: scale(1); }
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.1) 0%,
+      rgba(0,0,0,0.05) 40%,
+      rgba(14,12,10,0.75) 75%,
+      rgba(14,12,10,0.92) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 60px 64px;
+    max-width: 900px;
+    animation: fadeUp 1.2s 0.3s both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold-light);
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 7vw, 88px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.02;
+    margin-bottom: 24px;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    max-width: 500px;
+    line-height: 1.6;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 40px;
+    margin-top: 48px;
+  }
+
+  .hero-stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-stat-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .hero-stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-top: 2px;
+  }
+
+  .hero-divider {
+    width: 1px;
+    background: rgba(255,255,255,0.2);
+    align-self: stretch;
+  }
+
+  /* ─── NAV ───────────────────────────────────────────── */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--ink);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+  }
+
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 0.06em;
+    padding: 16px 0;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0;
+  }
+
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    padding: 20px 24px;
+    transition: color 0.2s;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 24px;
+    right: 24px;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.2s;
+  }
+
+  .nav-links a:hover { color: #fff; }
+  .nav-links a:hover::after { transform: scaleX(1); }
+
+  /* ─── SECTIONS ──────────────────────────────────────── */
+  .section {
+    padding: 100px 64px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    flex-shrink: 0;
+    padding-top: 6px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  /* ─── ITINERARY ─────────────────────────────────────── */
+  .itinerary {
+    background: var(--warm-white);
+  }
+
+  .days-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .day-row {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    min-height: 120px;
+    transition: background 0.2s;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  .day-row::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--gold);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+  }
+
+  .day-row:hover { background: rgba(201,148,58,0.04); }
+  .day-row:hover::before { transform: scaleY(1); }
+
+  .day-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 32px 24px 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    border-right: 1px solid var(--border);
+  }
+
+  .day-num-big {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .day-body {
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .day-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+
+  .day-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .day-chip {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .day-chip svg {
+    width: 13px;
+    height: 13px;
+    opacity: 0.6;
+  }
+
+  .day-detail {
+    font-size: 13.5px;
+    color: var(--muted);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .day-badge-wrap {
+    padding: 32px 32px 32px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+    min-width: 160px;
+  }
+
+  .badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .badge-easy    { background: #d4edda; color: #1d5c35; }
+  .badge-long    { background: #fff3cd; color: #7a5c00; }
+  .badge-hard    { background: #fde8e4; color: #8c2a16; }
+  .badge-scenic  { background: #dbeafe; color: #1e3a5f; }
+  .badge-acclim  { background: #ede9fe; color: #4c1d95; }
+  .badge-extreme { background: #fee2e2; color: #7f1d1d; }
+  .badge-transit { background: #f1f5f9; color: #475569; }
+
+  .day-img-thumb {
+    width: 90px;
+    height: 70px;
+    border-radius: 6px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    align-self: center;
+    flex-shrink: 0;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+  }
+
+  .day-row:hover .day-img-thumb { opacity: 1; }
+
+  /* ─── ROUTE MAP STRIP ───────────────────────────────── */
+  .route-strip {
+    background: var(--ink);
+    padding: 64px;
+    overflow-x: auto;
+  }
+
+  .route-strip-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+
+  .route-flow {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    min-width: max-content;
+  }
+
+  .route-stop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .route-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--gold-light);
+    position: relative;
+  }
+
+  .route-stop.highlight .route-dot {
+    width: 14px;
+    height: 14px;
+    background: var(--rust);
+    border-color: #ff8060;
+  }
+
+  .route-city {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    max-width: 70px;
+  }
+
+  .route-stop.highlight .route-city {
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .route-day {
+    font-size: 9px;
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.06em;
+  }
+
+  .route-line {
+    width: 48px;
+    height: 1px;
+    background: linear-gradient(to right, var(--gold), rgba(201,148,58,0.3));
+    flex-shrink: 0;
+    position: relative;
+    top: -12px;
+  }
+
+  /* ─── CHECKLIST ─────────────────────────────────────── */
+  .checklist-section {
+    background: var(--paper);
+  }
+
+  .checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .check-card {
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 36px;
+    background: var(--warm-white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .check-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .check-card:hover::after { transform: scaleX(1); }
+
+  .check-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .check-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--ink);
+  }
+
+  .check-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .check-list li {
+    font-size: 14px;
+    color: var(--slate);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  .check-list li::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--gold);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ─── TIPS BANNER ───────────────────────────────────── */
+  .tips {
+    background: linear-gradient(135deg, var(--accent-blue) 0%, #0f2540 100%);
+    padding: 80px 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+  }
+
+  .tip-item {}
+
+  .tip-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.08);
+    line-height: 1;
+    margin-bottom: -16px;
+  }
+
+  .tip-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+  }
+
+  .tip-text {
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ─── FOOTER ────────────────────────────────────────── */
+  footer {
+    background: var(--ink);
+    padding: 48px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gold-light);
+    font-style: italic;
+  }
+
+  .footer-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* ─── RESPONSIVE ────────────────────────────────────── */
+
+  /* Badge shown inline on mobile — hidden by default */
+  .day-badge-mobile { display: none; }
+
+  /* Tablet: 768px – 1024px */
+  @media (max-width: 1024px) {
+    .hero-content    { padding: 48px 40px; }
+    .nav             { padding: 0 40px; }
+    .section         { padding: 72px 40px; }
+    .route-strip     { padding: 48px 40px; }
+    .tips            { padding: 64px 40px; gap: 32px; }
+    .day-badge-wrap  { min-width: 130px; padding: 24px 20px 24px 16px; }
+    .day-body        { padding: 24px 28px; }
+    footer           { padding: 36px 40px; }
+  }
+
+  /* Mobile: ≤ 768px */
+  @media (max-width: 768px) {
+
+    /* Hero */
+    .hero            { min-height: 100svh; }
+    .hero-content    { padding: 28px 20px 44px; }
+    .hero-eyebrow    { font-size: 10px; letter-spacing: 0.16em; margin-bottom: 14px; }
+    .hero-eyebrow::before { width: 20px; }
+    .hero-title      { font-size: clamp(38px, 12vw, 58px); margin-bottom: 16px; }
+    .hero-subtitle   { font-size: 13.5px; max-width: 100%; line-height: 1.65; }
+    .hero-meta       { margin-top: 28px; gap: 0; flex-wrap: nowrap; justify-content: space-between; align-items: flex-start; }
+    .hero-stat-val   { font-size: 22px; }
+    .hero-stat-label { font-size: 8.5px; letter-spacing: 0.1em; }
+    .hero-divider    { display: none; }
+
+    /* Nav */
+    .nav             { padding: 0 16px; }
+    .nav-brand       { font-size: 12px; letter-spacing: 0.04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 140px; }
+    .nav-links       { flex-shrink: 0; }
+    .nav-links a     { padding: 18px 10px; font-size: 10px; letter-spacing: 0.08em; }
+    .nav-links a::after { left: 10px; right: 10px; }
+
+    /* Sections */
+    .section         { padding: 52px 20px; }
+    .section-header  { flex-direction: column; gap: 6px; margin-bottom: 32px; }
+    .section-label   { padding-top: 0; }
+    .section-title   { font-size: clamp(26px, 7vw, 38px); }
+
+    /* Route strip */
+    .route-strip        { padding: 36px 20px 40px; }
+    .route-strip-title  { font-size: 10.5px; margin-bottom: 24px; letter-spacing: 0.12em; }
+    .route-flow         { gap: 0; padding-bottom: 8px; }
+    .route-line         { width: 24px; }
+    .route-city         { font-size: 9px; max-width: 58px; }
+    .route-dot          { width: 8px; height: 8px; }
+    .route-stop.highlight .route-dot { width: 12px; height: 12px; }
+
+    /* Itinerary rows: day-num col | body (badge panel hidden) */
+    .day-row         { grid-template-columns: 52px 1fr; min-height: unset; }
+    .day-badge-wrap  { display: none; }
+    .day-badge-mobile { display: inline-flex !important; align-items: center; }
+
+    .day-num         { padding: 18px 10px 18px 0; }
+    .day-num-big     { font-size: 24px; }
+
+    .day-body        { padding: 18px 16px; gap: 8px; }
+    .day-title       { font-size: 16.5px; line-height: 1.3; }
+    .day-meta        { gap: 8px; flex-wrap: wrap; }
+    .day-chip        { font-size: 10px; gap: 4px; }
+    .day-detail      { font-size: 13px; line-height: 1.55; }
+
+    /* Tips */
+    .tips            { grid-template-columns: 1fr; padding: 48px 20px; gap: 36px; }
+    .tip-num         { font-size: 40px; margin-bottom: -12px; }
+    .tip-title       { font-size: 16px; }
+    .tip-text        { font-size: 13px; }
+
+    /* Checklist */
+    .checklist-grid  { grid-template-columns: 1fr; gap: 14px; }
+    .check-card      { padding: 26px 22px; }
+    .check-icon      { font-size: 24px; margin-bottom: 12px; }
+    .check-title     { font-size: 18px; margin-bottom: 16px; }
+    .check-list li   { font-size: 13.5px; }
+
+    /* Footer */
+    footer           { flex-direction: column; gap: 10px; text-align: center; padding: 32px 20px; }
+  }
+
+  /* Very small phones: ≤ 390px */
+  @media (max-width: 390px) {
+    .hero-title      { font-size: 34px; }
+    .hero-subtitle   { font-size: 13px; }
+    .nav-brand       { display: none; }
+    .nav-links a     { padding: 18px 9px; font-size: 9.5px; }
+    .day-num         { padding: 14px 8px 14px 0; }
+    .day-num-big     { font-size: 20px; }
+    .day-body        { padding: 14px 12px; }
+    .day-title       { font-size: 15px; }
+    .hero-stat-val   { font-size: 19px; }
+    .hero-stat-label { font-size: 8px; }
+    .section         { padding: 44px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── HERO ──────────────────────────────────────────────────────────── -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Motorcycle Expedition · Summer 2026</p>
+    <h1 class="hero-title">Mystical<br><em>Ladakh</em></h1>
+    <p class="hero-subtitle">Delhi → Amritsar → Srinagar → Leh → Turtuk → Umling La → Manali → Delhi. Thirteen days across the roof of the world.</p>
+    <div class="hero-meta">
+      <div class="hero-stat">
+        <span class="hero-stat-val">13</span>
+        <span class="hero-stat-label">Days</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-val">3200+</span>
+        <span class="hero-stat-label">Kilometres</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-val">5798m</span>
+        <span class="hero-stat-label">Max Altitude</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-val">1</span>
+        <span class="hero-stat-label">Lifetime</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ─── NAV ───────────────────────────────────────────────────────────── -->
+<nav class="nav">
+  <span class="nav-brand">Mystical Ladakh 2026</span>
+  <div class="nav-links">
+    <a href="#itinerary">Itinerary</a>
+    <a href="#route">Route</a>
+    <a href="#checklist">Checklist</a>
+  </div>
+</nav>
+
+<!-- ─── ROUTE STRIP ────────────────────────────────────────────────────── -->
+<div class="route-strip" id="route">
+  <p class="route-strip-title">The Route — Delhi to Umling La &amp; back</p>
+  <div class="route-flow">
+
+    <div class="route-stop highlight">
+      <div class="route-dot"></div>
+      <div class="route-city">Delhi<br><span class="route-day">Start</span></div>
+    </div>
+    <div class="route-line"></div>
+
+    <div class="route-stop">
+      <div class="route-dot"></div>
+      <div class="route-city">Amritsar<br><span class="route-day">Day 1</span></div>
+    </div>
+    <div class="route-line"></div>
+
+    <div class="route-stop">
+      <div class="route-dot"></div>
+      <div class="route-city">Srinagar<br><span class="route-day">Day 2</span></div>
+    </div>
+    <div class="route-line"></div>
+
+    <div class="route-stop">
+      <div class="route-dot"></div>
+      <div class="route-city">Kargil<br><span class="route-day">Day 3</span></div>
+    </div>
+    <div class="route-line"></div>
+
+    <div class="route-stop highlight">
+      <div class="route-dot"></div>
+      <div class="route-city">Leh<br><span class="route-day">Day 4–5</span></div>
+    </div>
+    <div class="route-line"></div>
+
+    <div class="route-stop">
+      <div class="route-dot"></div>
+      <div class="route-city">Turtuk<br><span class="route-day">Day 6</span></div>
+    </div>
+    <div class="route-line"></div>
+
+    <div class="route-stop">
+      <div class="route-dot"></div>
+      <div class="route-city">Siachen<br><span class="route-day">Day 7</span></div>
+    </div>
+    <div class="route-line"></div>
+
+    <div class="route-stop">
+      <div class="route-dot"></div>
+      <div class="route-city">Pangong<br><span class="route-day">Day 8</span></div>
+    </div>
+    <div class="route-line"></div>
+
+    <div class="route-stop highlight">
+      <div class="route-dot"></div>
+      <div class="route-city">Umling La<br><span class="route-day">Day 9 ★</span></div>
+    </div>
+    <div class="route-line"></div>
+
+    <div class="route-stop">
+      <div class="route-dot"></div>
+      <div class="route-city">Tso Moriri<br><span class="route-day">Day 10</span></div>
+    </div>
+    <div class="route-line"></div>
+
+    <div class="route-stop">
+      <div class="route-dot"></div>
+      <div class="route-city">Sarchu<br><span class="route-day">Day 11</span></div>
+    </div>
+    <div class="route-line"></div>
+
+    <div class="route-stop">
+      <div class="route-dot"></div>
+      <div class="route-city">Manali<br><span class="route-day">Day 12</span></div>
+    </div>
+    <div class="route-line"></div>
+
+    <div class="route-stop highlight">
+      <div class="route-dot"></div>
+      <div class="route-city">Delhi<br><span class="route-day">Day 13</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─── ITINERARY ──────────────────────────────────────────────────────── -->
+<section class="section itinerary" id="itinerary">
+  <div class="section-header">
+    <span class="section-label">Day by Day</span>
+    <h2 class="section-title">Full Itinerary</h2>
+  </div>
+
+  <div class="days-list">
+
+    <!-- Day 1 -->
+    <div class="day-row">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big">01</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title">Delhi → Amritsar</h3>
+        <div class="day-meta">
+          <span class="day-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L8 8H4l4 4-2 8 6-4 6 4-2-8 4-4h-4L12 2z"/></svg>
+            450 km
+          </span>
+          <span class="day-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            7–9 hrs
+          </span>
+          <span class="day-chip">NH44 via Panipat, Ludhiana</span>
+        </div>
+        <p class="day-detail">Visit the Golden Temple at dusk — worth every minute. Optional Wagah Border ceremony if you arrive in time.</p>
+        <span class="badge badge-easy day-badge-mobile">Easy Highway</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1609920658906-8223bd289001?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-easy">Easy Highway</span>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-row">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big">02</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title">Amritsar → Srinagar</h3>
+        <div class="day-meta">
+          <span class="day-chip">430 km</span>
+          <span class="day-chip">10–12 hrs</span>
+          <span class="day-chip">Pathankot → Jammu → Ramban → Banihal</span>
+        </div>
+        <p class="day-detail">The longest day. Heavy traffic near Ramban — start before 6 AM. Tunnel through Banihal cuts time significantly.</p>
+        <span class="badge badge-long day-badge-mobile">Long Ride ⚠️</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-long">Long Ride ⚠️</span>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-row">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big">03</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title">Srinagar → Kargil</h3>
+        <div class="day-meta">
+          <span class="day-chip">200 km</span>
+          <span class="day-chip">7–9 hrs</span>
+          <span class="day-chip">Sonamarg → Zoji La → Drass</span>
+        </div>
+        <p class="day-detail">First taste of the high Himalayas. Zoji La pass demands respect — start early and ride steady. Drass is the second coldest inhabited place on Earth.</p>
+        <span class="badge badge-acclim day-badge-mobile">Acclimatization</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1609942072337-c3370e8208c1?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-acclim">Acclimatization</span>
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-row">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big">04</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title">Kargil → Leh</h3>
+        <div class="day-meta">
+          <span class="day-chip">220 km</span>
+          <span class="day-chip">6–8 hrs</span>
+        </div>
+        <p class="day-detail">A landmark day. Pass Lamayuru Monastery, the Moonland landscape, and the famous Magnetic Hill before rolling into Leh.</p>
+        <span class="badge badge-scenic day-badge-mobile">Scenic Ride</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-scenic">Scenic Ride</span>
+      </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day-row">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big">05</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title">Leh — Rest &amp; Explore</h3>
+        <div class="day-meta">
+          <span class="day-chip">No ride</span>
+          <span class="day-chip">Altitude: ~3500m</span>
+        </div>
+        <p class="day-detail">Mandatory acclimatization day. Visit Shanti Stupa at sunrise, Leh Palace, and the local market. Hydrate and take it slow — your body is adjusting.</p>
+        <span class="badge badge-acclim day-badge-mobile">Rest Day</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-acclim">Rest Day</span>
+      </div>
+    </div>
+
+    <!-- Day 6 -->
+    <div class="day-row">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big">06</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title">Leh → Turtuk</h3>
+        <div class="day-meta">
+          <span class="day-chip">200 km</span>
+          <span class="day-chip">7–9 hrs</span>
+          <span class="day-chip">via Khardung La → Nubra Valley</span>
+        </div>
+        <p class="day-detail">Khardung La at 5359m — one of the world's highest motorable roads. Nubra Valley opens like a revelation. Turtuk, a Balti village, is otherworldly.</p>
+        <span class="badge badge-hard day-badge-mobile">High Altitude</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-hard">High Altitude</span>
+      </div>
+    </div>
+
+    <!-- Day 7 -->
+    <div class="day-row">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big">07</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title">Turtuk → Siachen Base Camp → Diskit/Hunder</h3>
+        <div class="day-meta">
+          <span class="day-chip">220–260 km</span>
+          <span class="day-chip">8–10 hrs</span>
+          <span class="day-chip">Partapur → Thoise → SBC</span>
+        </div>
+        <p class="day-detail">Rare access territory. Carry all permits and IDs — multiple checkpoints. Road beyond Thoise can be rough. Return to Nubra for the night.</p>
+        <span class="badge badge-hard day-badge-mobile">Rare Access ⚠️</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-hard">Rare Access ⚠️</span>
+      </div>
+    </div>
+
+    <!-- Day 8 -->
+    <div class="day-row">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big">08</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title">Nubra → Pangong Lake</h3>
+        <div class="day-meta">
+          <span class="day-chip">180–220 km</span>
+          <span class="day-chip">7–9 hrs</span>
+          <span class="day-chip">Diskit → Shyok → Pangong</span>
+        </div>
+        <p class="day-detail">Remote Shyok Valley route — stunning but unpaved in stretches. Check road conditions the evening before. The first sight of Pangong's blue is breathtaking.</p>
+        <span class="badge badge-scenic day-badge-mobile">Scenic + Remote</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-scenic">Scenic + Remote</span>
+      </div>
+    </div>
+
+    <!-- Day 9 -->
+    <div class="day-row" style="background:rgba(201,148,58,0.03); border-left: 3px solid var(--gold);">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big" style="color:var(--gold)">09</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title" style="color:var(--rust)">Hanle → Umling La → Hanle ★</h3>
+        <div class="day-meta">
+          <span class="day-chip">150 km</span>
+          <span class="day-chip">6–8 hrs</span>
+          <span class="day-chip">5798m altitude</span>
+        </div>
+        <p class="day-detail">The crown jewel. World's highest motorable pass. Extreme altitude, thin air — ride slowly, breathe deeply. This is why you came.</p>
+        <span class="badge badge-extreme day-badge-mobile">Extreme ⚠️</span>
+        <span class="badge day-badge-mobile" style="background:var(--gold);color:#000;">Summit Day</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1549887534-1541e9326642?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-extreme">Extreme ⚠️</span>
+        <span class="badge" style="background:var(--gold);color:#000;">Summit Day</span>
+      </div>
+    </div>
+
+    <!-- Day 10 -->
+    <div class="day-row">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big">10</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title">Hanle → Tso Moriri</h3>
+        <div class="day-meta">
+          <span class="day-chip">220 km</span>
+          <span class="day-chip">7–8 hrs</span>
+        </div>
+        <p class="day-detail">A remote, meditative ride through the Changthang plateau. Tso Moriri is quieter and less visited than Pangong — camp here if you can.</p>
+        <span class="badge badge-scenic day-badge-mobile">Scenic Remote</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1593697820988-9a5d5c1e55a3?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-scenic">Scenic Remote</span>
+      </div>
+    </div>
+
+    <!-- Day 11 -->
+    <div class="day-row">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big">11</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title">Tso Moriri → Sarchu / Jispa</h3>
+        <div class="day-meta">
+          <span class="day-chip">250 km</span>
+          <span class="day-chip">8–10 hrs</span>
+        </div>
+        <p class="day-detail">Long but manageable. Jispa is the safer, more comfortable stop. Sarchu is at high altitude — acclimatization issues sometimes arise overnight there.</p>
+        <span class="badge badge-transit day-badge-mobile">Transit Day</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1544739313-8f7f8f1e0cde?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-transit">Transit Day</span>
+      </div>
+    </div>
+
+    <!-- Day 12 -->
+    <div class="day-row">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big">12</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title">Sarchu / Jispa → Manali</h3>
+        <div class="day-meta">
+          <span class="day-chip">140 km</span>
+          <span class="day-chip">6–7 hrs</span>
+          <span class="day-chip">via Baralacha La &amp; Rohtang</span>
+        </div>
+        <p class="day-detail">The descent from the Himalayas. Rohtang can be congested — check permit requirements in advance. Manali feels like civilization after Ladakh.</p>
+        <span class="badge badge-scenic day-badge-mobile">Mountain Descent</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-scenic">Mountain Descent</span>
+      </div>
+    </div>
+
+    <!-- Day 13 -->
+    <div class="day-row">
+      <div class="day-num">
+        <span style="font-size:10px;letter-spacing:0.1em;color:var(--muted)">DAY</span>
+        <span class="day-num-big">13</span>
+      </div>
+      <div class="day-body">
+        <h3 class="day-title">Manali → Delhi</h3>
+        <div class="day-meta">
+          <span class="day-chip">500 km</span>
+          <span class="day-chip">10–12 hrs</span>
+        </div>
+        <p class="day-detail">The final stretch. NH3 to NH44 — straightforward highway riding. The miles will feel long, but the memories will last a lifetime.</p>
+        <span class="badge badge-long day-badge-mobile">Final Ride</span>
+      </div>
+      <div class="day-badge-wrap">
+        <div class="day-img-thumb" style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=300&q=70')"></div>
+        <span class="badge badge-long">Final Ride</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── TIPS ────────────────────────────────────────────────────────────── -->
+<div class="tips">
+  <div class="tip-item">
+    <div class="tip-num">01</div>
+    <h3 class="tip-title">Acclimatize, Don't Rush</h3>
+    <p class="tip-text">Altitude sickness is real and dangerous. Plan two full rest days in Leh before pushing higher. Carry Diamox and know the symptoms.</p>
+  </div>
+  <div class="tip-item">
+    <div class="tip-num">02</div>
+    <h3 class="tip-title">Permits in Advance</h3>
+    <p class="tip-text">Inner Line Permits for Turtuk, Siachen, Pangong, and Hanle are mandatory. Apply at least 2 weeks ahead. Carry photocopies everywhere.</p>
+  </div>
+  <div class="tip-item">
+    <div class="tip-num">03</div>
+    <h3 class="tip-title">Fuel Discipline</h3>
+    <p class="tip-text">Fill up at every opportunity. Fuel stations are sparse beyond Leh — always carry at least 5L extra. Petrol quality can vary; carry octane booster.</p>
+  </div>
+</div>
+
+<!-- ─── CHECKLIST ──────────────────────────────────────────────────────── -->
+<section class="section checklist-section" id="checklist">
+  <div class="section-header">
+    <span class="section-label">Pack Right</span>
+    <h2 class="section-title">Essential Checklist</h2>
+  </div>
+
+  <div class="checklist-grid">
+
+    <div class="check-card">
+      <div class="check-icon">🏍️</div>
+      <h3 class="check-title">Riding Gear</h3>
+      <ul class="check-list">
+        <li>Full-face helmet (DOT/ISI rated)</li>
+        <li>Riding jacket with CE armour</li>
+        <li>Waterproof riding gloves</li>
+        <li>Ankle-protection boots</li>
+        <li>Riding pants with knee guards</li>
+        <li>Thermal underlayer</li>
+        <li>Rain suit / waterproof cover</li>
+      </ul>
+    </div>
+
+    <div class="check-card">
+      <div class="check-icon">📋</div>
+      <h3 class="check-title">Documents</h3>
+      <ul class="check-list">
+        <li>Driving Licence (original + copy)</li>
+        <li>Vehicle RC + Insurance</li>
+        <li>Inner Line Permits (multiple)</li>
+        <li>Government Photo ID (Aadhar)</li>
+        <li>Emergency contacts list</li>
+        <li>Hotel confirmations printed</li>
+      </ul>
+    </div>
+
+    <div class="check-card">
+      <div class="check-icon">🔧</div>
+      <h3 class="check-title">Bike &amp; Tools</h3>
+      <ul class="check-list">
+        <li>Full service before departure</li>
+        <li>Basic toolkit (spanners, pliers)</li>
+        <li>Puncture repair kit + inflator</li>
+        <li>5L reserve fuel canister</li>
+        <li>Clutch &amp; brake levers (spares)</li>
+        <li>Zip ties, duct tape, wire</li>
+        <li>Engine oil (1L extra)</li>
+      </ul>
+    </div>
+
+    <div class="check-card">
+      <div class="check-icon">💊</div>
+      <h3 class="check-title">Health &amp; Safety</h3>
+      <ul class="check-list">
+        <li>Diamox (altitude sickness)</li>
+        <li>Dolo 650 / paracetamol</li>
+        <li>First aid kit</li>
+        <li>Oral rehydration salts (ORS)</li>
+        <li>Sunscreen SPF 50+</li>
+        <li>Lip balm &amp; moisturiser</li>
+        <li>Hydration bladder / bottles</li>
+      </ul>
+    </div>
+
+    <div class="check-card">
+      <div class="check-icon">📡</div>
+      <h3 class="check-title">Navigation &amp; Comms</h3>
+      <ul class="check-list">
+        <li>Offline maps downloaded (Maps.me)</li>
+        <li>BSNL SIM (best Ladakh coverage)</li>
+        <li>Portable power bank (20000mAh)</li>
+        <li>Phone mount (vibration-damped)</li>
+        <li>Walkie-talkies (for groups)</li>
+      </ul>
+    </div>
+
+    <div class="check-card">
+      <div class="check-icon">🎒</div>
+      <h3 class="check-title">Clothing &amp; Camp</h3>
+      <ul class="check-list">
+        <li>Fleece jacket + down jacket</li>
+        <li>Woollen socks (4–5 pairs)</li>
+        <li>Quick-dry t-shirts &amp; trousers</li>
+        <li>Balaclava &amp; neck gaiter</li>
+        <li>Sunglasses (UV400)</li>
+        <li>Sleeping bag (rated -10°C)</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────────────────────── -->
+<footer>
+  <span class="footer-brand">Mystical Ladakh 2026</span>
+  <span class="footer-note">Built for an unforgettable ride · Delhi to Umling La</span>
+</footer>
+
+</body>
+</html>
